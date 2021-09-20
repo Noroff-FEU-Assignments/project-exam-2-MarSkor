@@ -1,0 +1,147 @@
+@import "../1-base/base-index";
+
+/*
+anything that does not fit into the components scss folder
+is placed here
+*/
+
+.hero__landingpage, .contactPage__bg {
+    height: 100vh;
+}
+
+.hero__landingpage{
+    width: auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*
+* HOME PAGE
+-------------------------------------
+*/
+
+.hero__home{
+    background-image: url("../../assets/home_landingpage_dark.jpg");
+}
+
+.hero-content{
+    margin-top: -50px;
+}
+
+.landingpage-home{
+    
+    h1{
+        font-size: $heroHeading;
+        color: $color-primary;
+    }
+    &__wrap{
+        @include complete--center;
+        text-align: center;
+        color: $fontColorLight;
+        font-size: $paragraphNormal;
+        font-weight: $light-font-weight;
+    }
+
+}
+
+
+
+/*
+* ESTABLISHMENTS PAGE
+-------------------------------------
+*/
+
+.estaTopPage{
+    padding: 25px 0 20px 0;
+    &__col{
+       top: 25px;
+    }
+}
+
+.estaTopPageList{
+    padding: 40px 0 80px 0;
+}
+
+/*
+* CONTACT PAGE
+-------------------------------------
+*/
+.contactPage{
+    margin-bottom: 50px;
+    max-width: 750px;
+    margin: 0 auto;
+    &__bg{
+        background-color: $color-secondary-dark;
+    }
+    &__topContent{
+        padding-bottom: 20px;
+        
+    }
+    &__topContent p{
+        color: $fontColorLight2;
+        font-weight: $light-font-weight;
+        line-height: 15px;
+    }
+}
+
+@media screen and(min-width: $screen-md){
+    .contactPage{
+        padding: 100px 0 50px 0;
+    }
+}
+
+/*
+* CONFIRMATION PAGE
+-------------------------------------
+*/
+.confirmation{
+    &__wrap{
+        margin-top: -50px;
+        @include flex--center;
+    }
+    &__text-center{
+        text-align: center;
+    }
+    &__iconCheck{
+        bottom: 5px;
+        color: $semSuccessIcon;
+    }
+
+    &__iconArrow{
+        bottom: 2px;
+        margin-right: 4px;
+        font-size: 24px;
+    }
+}
+
+.iconConfirmation{
+    position: relative;
+}
+
+.confirmationpage{
+    background-color: $color-primary;
+}
+
+/*
+* LOGIN PAGE
+-------------------------------------
+*/
+
+.hero__login{
+    background-image: url("../../assets/image_login-page.jpg");
+}
+
+.landingpage{
+    position: relative;
+    top: 150px;
+}
+
+@media screen and(min-width:$screen-md ){
+    .landingpage{
+        @include complete--center;
+    }
+}

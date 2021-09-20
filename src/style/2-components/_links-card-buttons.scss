@@ -1,0 +1,328 @@
+@import "../1-base/base-index";
+
+/* 
+*LINKS
+---------------------------------
+*/
+
+.link-primary a, .icon-arrow{
+    font-size:$paragraphSmall; 
+}
+
+.link-primary a, .link-secondary{
+    font-family: $font-base;
+}
+
+.link-primary a{
+    color: $fontColorHeadingDark;
+    transition: $quick-animation-time;
+    text-transform: uppercase;
+}
+
+.icon-arrow{
+    padding-right:4px;
+    margin-top: -3px;
+}
+
+.link-primary a:hover{
+    color:$primary-theme-shade;
+    transition: $quick-animation-time;
+    text-decoration: none;
+}
+
+
+.link-secondary{
+    color: $fontColorHeadingDark;
+    transition: $quick-animation-time;
+}
+.link-secondary:hover{
+    color:$primary-theme-shade ;
+}
+
+.booking-link{
+    text-decoration: underline;
+}
+
+
+/* 
+*CARDS - ESTABLISHMENTS
+---------------------------------
+*/
+
+
+.estaCard-container{
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.estaCard{
+    &__col{
+        height: 200px;
+    }
+    &__wrap{
+        padding-bottom: 50px;
+        max-width: 740px;
+    }
+    &__bg{
+        box-shadow: $box-shadow-sm
+    }
+    &__image{
+        border-radius: 2px;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    &__title{
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+    &__price{
+        margin-top: -25px;
+        color: $color-primary;
+    }
+    &__small-text{
+        color: $DarkBlueShade;
+        margin-top: -20px;
+    }
+    
+}
+
+
+   
+@media screen and (min-width: 1200px){
+    .estaCard{
+      
+        &__button-container{
+            bottom: 0;
+            position: absolute;
+            right: 0;
+            padding: 20px 40px;
+            
+        }
+    }
+}
+@media screen and(max-width: 576px){
+    .estaCard{
+        &__price{
+            margin-top: 25px;
+        }
+    }
+}
+
+
+/*  
+* DETAILS CARD/COLUMNS
+---------------------------------
+*/
+
+.detail__content-wrap{
+    padding-bottom: 40px;
+}
+
+.detail{
+    &__content-wrap{
+        padding: 0px 10px;
+    }
+    &__container{
+        padding: 50px 0 180px 0;
+    }
+    &__image{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    &__content{
+        background-color: $color-secondary-light;
+        padding: 40px;
+    }
+
+    &__price h2, 
+    &__price p, 
+    &__description, 
+    &__iconContainer{
+        color:$fontColorHeadingDark;
+    }
+    &__price p, &__description{
+        color: $fontColorHeadingDark;
+        font-size: $paragraphNormal;
+    }
+    
+    &__iconContainer{
+        font-family: $font-base;
+        font-size: $paragraphNormal;
+        display: flex;  
+    }
+
+    &__iconLocation{
+        color: $redAccent;
+        font-size: 25px;
+    }
+    &__wrapper{
+        padding-left: 20px;
+    }
+}
+
+.iconInfo, .iconLocation{
+    position: relative;
+}
+.iconInfo{
+    top: 1.8px;
+}
+
+.iconLocation{
+    position: relative;
+    top: -3px;
+}
+
+
+div.detail__image-container.col, 
+div.detail__image-container.col-md-7 {
+    padding: 0px 0px; 
+}
+
+@media screen and(max-width:$screen-md){
+    div.detail__h1 h1{
+        font-size: $heading1-smallScreen;
+    }
+}
+
+/* 
+*BUTTONS 
+---------------------------------
+*/
+
+.btn-center{
+    text-align: center;
+}
+
+button.btn, .btn-book-now, 
+button.contactForm__submitBtn, 
+button.bookingForm__bookBtn, 
+.loginBtn,
+.confirm-btn {
+    font-size: 14px;
+    font-family: $font-base;
+    text-transform: uppercase;
+    border: none;
+}
+
+.primary-btn, 
+button.contactForm__submitBtn,  
+button.bookingForm__bookBtn, .loginBtn, 
+button.admin-button {
+    border-radius: 2px;
+    padding: 4px 16px;
+    color: $fontColorLight;
+}
+
+.primary-btn{
+    font-weight: 300;
+    
+}
+
+button.btn-secondary{
+    color: $DarkBlue;
+    border-radius: 2px;
+    padding: 4px 10px;
+    box-shadow:  $box-shadow-sm;
+    background-color: $button-secondary;
+   
+}
+button.btn-secondary:hover{
+    background-color: $button-secondary-hover;
+}
+
+.button-spacing{
+    padding: 5px 0 0 15px;
+}
+
+.btn-book-now, button.admin-button{
+    border: 2px solid $button-primary;
+    color: $color-primary-light;
+    transition: .3s ease;   
+}
+
+.btn-book-now:hover, button.admin-button:hover{
+    background-color:$button-primary ;
+    color: $fontColorDark;
+    text-decoration: none;
+    border: 2px solid $button-primary;
+}
+
+.btn-book-now.active{
+    background-color:$button-primary ;
+    color: $fontColorDark; 
+   
+}
+
+@media screen and(max-width:992px){
+    .button-spacing{
+        padding:15px 0  0 0;
+    }
+}
+
+.contactForm{
+    &__btnContactContainer{
+        position: relative;
+        text-align: center;
+
+    }
+}
+
+button.contactForm__submitBtn, 
+button.bookingForm__bookBtn, 
+.loginBtn{
+   background-color: $color-primary;
+   color: $fontColorHeadingDark;
+   font-weight: 500;
+   transition: $quick-animation-time;
+   box-shadow:  $box-shadow-sm;
+}
+
+button.contactForm__submitBtn:hover,  
+button.bookingForm__bookBtn:hover, .loginBtn:hover{
+    background-color: $primary-theme-shade;
+    color: $white;
+}
+
+.delete-btn{
+    &__container{
+        text-align: right;
+        width: 100%;
+        padding: 10px 0 0 0;
+    }
+}
+
+button.delete-btn {
+    background-color: $semDanger;
+    font-weight: $bold-font-weight;
+    font-size: $paragraphNormal;
+    box-shadow: $box-shadow-sm;
+}
+
+
+
+button.admin-button{
+    background-color: transparent;
+  
+}
+
+.btn-admin-container{
+    position: relative;
+    bottom: 3px;
+}
+
+.confirm-btn{
+    padding: 5px 10px;
+    border-radius:2px ;
+}
+
+.confirm-cancel{
+    background-color: $LightGreyShade;
+    margin-right: 10px;
+}
+
+.confirm-delete{
+    background-color: $semDanger;
+}
+

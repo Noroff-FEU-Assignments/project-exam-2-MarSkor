@@ -1,0 +1,75 @@
+// SCREEN SIZES
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+$screen-full: 1400px;
+
+
+//SEMANTIC COLOR
+$semWarning: rgb(245, 154, 25);
+$semInfo:#3655cc;
+$semSuccess:rgb(63, 190, 101);
+$semSuccessIcon: rgb(61, 150, 49);
+$semDanger: rgb(255, 73, 83);
+
+
+//MAIN COLORS
+$color-primary: rgb(242, 170, 76) ;
+$color-primary-dark: #1f1c1f;
+$color-primary-light: rgb(228, 228, 228);
+$color-secondary-light: rgb(249, 213, 166);
+$color-secondary-dark: rgb(64, 59, 64);
+
+$headingHero: $color-primary;
+$primary-nav: $color-primary-dark;
+$border-color: rgba(28, 66, 89, 0.353);
+$primary-theme-shade: rgb(194, 136, 61);
+
+$button-primary: rgb(242, 175, 136);
+$button-secondary: $color-primary;
+$button-secondary-hover: $color-secondary-light;
+$background-body: rgba(245, 245, 245, 0.886);
+$background-dropwdown-menu: rgb(245, 245, 245);
+$pageAccent: $color-secondary-light;
+$redAccent: rgb(255, 1, 34);
+
+$white: rgb(255, 255, 255);
+$black: rgb(0, 0, 0);
+$DarkBlue: rgb(28, 66, 89);
+$DarkBlueShade: rgba(28, 66, 89, 0.398);
+$DarkGreyShade:rgb(232, 232, 232);
+$DarkGreyShade2: rgb(38, 35, 38);
+$LightGreyShade: rgb(119, 110, 119);
+
+$fontColorDark: $DarkGreyShade2;
+$fontColorLight: rgb(245, 245, 245);
+$fontColorHero: rgb(245, 187, 112);
+$fontColorHeading:$color-primary;
+$fontColorHeadingDark: $DarkBlue;
+$fontColorDarkBlue: $DarkBlue;
+$fontColorLight2: rgb(253, 243, 237);
+
+
+
+
+//BOOTSTRAP CUSTOM
+$nav-brand: $color-primary;
+$navbar-dark-brand-color: $color-primary;
+$navbar-dark-brand-hover-color: none;
+
+$theme-colors: (
+    "dark": $color-primary-dark,
+    "secondary": $color-primary-light,
+);
+
+
+$quick-animation-time: 0.3s ease;
+$card-border-width: none;
+$input-focus-color:$fontColorDark;
+$input-placeholder-color: $LightGreyShade;           
+$input-border-color: $DarkBlue;
+
+$box-shadow:0 .5rem 1rem rgba($black, .15);
+$box-shadow-sm:0 .125rem .25rem rgba($black, .075);
+$box-shadow-lg:0 1rem 3rem rgba($black, .175);
+$box-shadow-inset:inset 0 1px 2px rgba($black, .075);

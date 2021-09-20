@@ -1,0 +1,210 @@
+
+
+
+label.form-label{
+    color: $fontColorLight;
+}
+
+label.form-label, .form-error, .success{
+    font-family: $font-base;
+    font-size: $paragraphNormal;
+}
+
+
+label.form-label, input.form-control, textarea.form-control{
+    font-family: $font-base;
+}
+
+.label-light{
+    color:$fontColorLight2;
+}
+
+.form-center{
+    margin: 0 auto;
+}
+
+/*
+* CONTACT US FORM
+---------------------------------
+*/
+
+
+.exclamationTriangle{
+    position: relative;
+    bottom: 2px;
+}
+
+.errormsg{
+    color: $redAccent;
+    font-weight: 400;
+    background-color: rgb(255, 218, 218);
+    border-radius: 2px;
+    padding: 4px;
+}
+
+.contactForm{
+    &__inputtext{
+        color: $color-primary-dark;
+    }
+}
+
+/*
+* BOOKING FORM
+---------------------------------
+*/
+
+.bookingForm{
+    padding: 40px 0 50px 0;
+    &__wrap{
+        max-width: 800px;
+        padding: 20px 0 100px 0;
+    }
+}
+
+
+form h3{
+    color: $primary-theme-shade;
+    text-transform: uppercase;
+}
+
+.bookingForm{
+    &__label-dark.form-label{
+        color: $DarkBlue;
+    }
+    
+    
+}
+.bookingForm__btnBookNowContainer{
+    text-align: center;
+}
+
+.bookingForm__bookBtn{
+    box-shadow: $box-shadow;
+}
+
+option{
+    color: $DarkBlue;
+   
+}
+
+
+/*
+* LOGIN FORM
+---------------------------------
+*/
+
+.loginForm{
+    &__wrap{
+        max-width: 350px;
+    }
+}
+
+.wrapper-pass{
+    position: relative;
+  display: flex;
+}
+
+.show-password{
+    position: absolute;
+    top: 32%;
+    right: 5%;
+}
+
+
+/*
+* ADMIN - CREATE ESTABLISHMENT
+---------------------------------
+*/
+
+.createestablishment{
+    
+    &__container{
+        max-width: 750px;
+        margin: 0 auto;
+        padding: 40px 0 150px 0;
+        h1{
+            text-align: center;
+            padding-top: 20px;
+        }
+    }
+    &__label.form-label{
+        color: $fontColorDarkBlue;
+    }
+    
+
+}
+
+.success{
+    &__text{
+        color: $semSuccess;
+        margin: 0px;
+    }
+
+    &__link{
+        margin-left: 4px;
+    }
+
+    &__icon{
+        position: relative;
+        bottom: 2px;
+    }
+}
+
+.error{
+    &__text{
+        margin: 0px;
+        color: $redAccent;
+    }
+
+    &__icon{
+        position: relative;
+        bottom: 3px;
+    }
+}
+
+.form-submit{
+    background-color:$color-primary-dark;
+    padding: 6px;
+    margin-bottom: 20px;
+    border-radius: 2px;
+    box-shadow: $box-shadow;
+    text-align: center;
+}
+
+/*
+* SEARCH FORM - ESTABLISHMENTS
+---------------------------------
+*/
+@media screen and(min-width: $screen-xl){
+    .estaTopPage{
+        &__searchbar{
+            max-width: 250px;
+            width: 100%;  
+        }
+    }
+}
+.estaTopPage{
+    &__searchbar{
+        max-width: 370px;
+        margin: 0 auto;
+        transition: .3s ease;
+        z-index: 999;
+    }
+
+
+    &__list-group-item:hover{
+        background-color: $background-dropwdown-menu;
+        position: relative;
+        cursor: pointer;
+    }
+}
+
+@media screen and(min-width:$screen-md ){
+    .estaTopPage{
+        &__searchbar{
+            position:absolute;
+            right:0;
+            top:0;
+        }
+    }
+}

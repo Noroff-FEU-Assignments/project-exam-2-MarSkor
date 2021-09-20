@@ -1,0 +1,92 @@
+@import "../1-base/base-index";
+
+.navbar-brand{
+    font-family: $font-heading;
+    font-weight: $bold-font-weight;
+    text-transform: uppercase;
+    transition: $quick-animation-time;
+}
+
+
+.nav-link{
+    font-family: $font-base;
+    text-transform: uppercase;
+    font-size: $navFont;
+    font-weight:$light-font-weight;
+    transition: $quick-animation-time;
+    letter-spacing: 0.5px;
+}
+
+.navbar-nav{
+    float: left;
+    position: relative;  
+}
+
+.nav-default{
+    transition: $quick-animation-time;
+}
+
+.nav-default a.active{
+    border-bottom: 3px solid $redAccent;
+    margin-bottom: -9px;
+}
+
+.nav-default .btn-book-now.active{
+   border-bottom: none;
+}
+
+@media screen and(max-width:992px){
+    
+    .nav-default a.active{
+        margin-bottom: 18px;
+    }
+
+    #responsive-navbar-nav{
+        padding-bottom: 25px;
+    }
+    
+}
+
+/*
+* ADMIN NAV
+---------------------------------
+*/
+.adminnav{
+    background-color: $color-primary;
+    box-shadow: $box-shadow-sm;
+    
+    &__item{
+        padding: 7px 15px 7px 15px;
+        transition: $quick-animation-time; 
+    }
+
+    &__icon{
+        position: relative;
+        bottom: 2px;
+    }
+
+    &__link{
+        color: $fontColorDarkBlue;
+        transition: $quick-animation-time;
+        font-weight: $base-font-weight; 
+        font-family: $font-base;     
+    }
+
+    &__link:hover{
+        text-decoration: none;
+    }
+
+    &__item:hover{
+        background-color: $background-body;
+        
+    }
+    
+}
+
+.dropdown-menu.show{
+    background-color: $background-dropwdown-menu;
+    font-family: $font-base;
+    position: relative;
+    left: 15px;
+    transition: $quick-animation-time;
+}

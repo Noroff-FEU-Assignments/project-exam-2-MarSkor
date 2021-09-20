@@ -1,0 +1,161 @@
+@import "../1-base/base-index";
+
+/*
+anything that does not fit into the components scss folder
+is placed here, meaning globabl styles - font, container, spinner etc. 
+*/
+
+html body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: $background-body;
+}
+
+img{
+    width: auto;
+}
+
+.content-center{
+    text-align: center;
+}
+
+.page-container{
+    position: relative;
+    min-height: 100vh;
+}
+
+.app-content-container {
+    padding-bottom: 2.5rem;    
+}
+
+div.container{
+    max-width: $screen-full;
+    width: 100%;
+}
+
+.alignRight{
+    text-align: right;
+}
+
+.alignCenter{
+    text-align: center;
+}
+
+.pd-bottom{
+    padding-bottom: 20px;
+}
+
+.fontDark{
+    color: $fontColorHeadingDark;
+}
+
+.topPage{
+    padding: 35px 0 20px 0;
+}
+
+.bookingTopPage, .estaTopPage{
+    background-color:$pageAccent ;
+}
+
+.estaTopPage, .bookingTopPage{
+    color: $fontColorHeadingDark;
+    &__wrap h1 {
+        color: $fontColorHeadingDark;
+        font-weight: 600;
+    } 
+}
+
+
+
+.headingDark{
+    h1{
+        color: $primary-theme-shade;
+    }
+   
+}
+
+.spinner {
+    &__wrap{
+        position: relative;
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+        top: 120px;
+    }
+}
+
+
+
+@media screen and(min-width:$screen-md){
+    .spinner{
+        &__wrap{
+            @include complete--center;
+        }
+    }
+}
+
+img{
+    width: 100%;
+}
+
+
+h1, h2, h3, h4, .card-title{
+    font-family:$font-heading;  
+}
+
+h1{
+    color: $headingHero;
+    text-transform: uppercase; 
+}
+
+h2{
+  color: $primary-theme-shade;  
+}
+
+h3 {
+    font-size: 26px;
+}
+
+.card-title.h5, .estaCard__price{
+    font-size: 24px;
+}
+
+.nav-tabs{
+    background-color: lightblue;
+}
+p{
+    font-family: $font-base;
+}
+
+.padding-bottom{
+    padding-bottom:20px;
+}
+
+
+
+
+@media only screen and(max-width: 765px){
+    h1{
+        font-size:$heading1-smallScreen ;
+    }
+    h2{
+        font-size: $heading2-smallScreen;
+    }
+    h3{
+        font-size: $heading3-smallScreen;
+    }
+    body, p{
+        font-size: $paragraphSmall;
+    }
+    .landingpage{
+        &__wrap{
+            margin-top: -50px;
+            max-width: 100%;
+        }
+        h1{
+            font-size: $heroHeading-smallScreen;
+        }
+    }
+}
+

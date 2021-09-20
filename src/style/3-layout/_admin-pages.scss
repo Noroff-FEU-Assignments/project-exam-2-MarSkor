@@ -1,0 +1,130 @@
+
+
+.box{
+    background-color: $white;
+    padding: 10px;
+    border-radius: 2px;
+    box-shadow: $box-shadow-sm;
+    position: relative;
+}
+
+.delete-icon{
+    color: $semDanger;
+    font-size: 20px;
+    transition: $quick-animation-time;
+}
+.delete-icon:hover{
+    cursor: pointer;
+    color: $redAccent;
+}
+
+.flex-wrap{
+    width: 100%;
+    display: flex;
+}
+
+.delete-icon-wrap{
+    margin-left: auto;
+    order: 2;
+}
+
+.empty-array{
+    background-color: $semInfo;
+    color: $white; 
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 5px 0 5px 0;
+    border-radius: 2px;
+    box-shadow: $box-shadow-sm;
+}
+
+.loading-text, .empty-array{
+    font-family: $font-base;
+    font-size: $paragraphSmall;
+}
+
+@media screen and(min-width:$screen-md){
+    .empty-array{
+         font-size: $paragraphNormal;;
+    }
+}
+/*
+*ADMIN SECTION
+---------------------------------
+*/
+
+div.admin__container.container-fluid{
+    padding: 0px 0px;
+}
+.admin-section{
+    padding: 30px 0 10px 0;
+}
+
+.admin-list{
+    font-family: $font-base;
+    font-weight: $base-font-weight;
+    &__ol{
+        list-style-type: circle;
+    }
+}
+
+
+/*
+ * CONTACTS
+ ---------------------------------
+*/
+.message{
+    &__wrapper{
+        padding: 25px 0 25px 0;
+        max-width: 500px;
+        margin: 0 auto;
+    } 
+}
+
+
+/*
+* ENQUIRIES
+---------------------------------
+*/
+
+
+.enquiry{
+    &__full-container.container{
+        padding: 0px 0px;
+    }
+    &__container{
+        padding: 25px 0 25px 0;
+        max-width: 800px;
+    }
+    &__container.row{
+        margin: 0 auto;
+    }
+    &__wrapper{
+        padding-bottom: 20px;
+        
+    }
+
+}
+
+
+
+
+#enquiry-details h5{
+    color: $primary-theme-shade;
+}
+
+
+@media screen and(max-width:$screen-md){
+    .enquiry__wrapper.col-md-12{
+        padding: 4px;
+    }
+    .admin-section{
+        h1{
+            text-align: center;
+        }
+    }
+    .messages__full-container.container{
+        padding: 4px;
+    }
+}
