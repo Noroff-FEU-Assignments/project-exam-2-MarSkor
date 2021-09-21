@@ -10,6 +10,9 @@ label.form-label, .form-error, .success{
     font-size: $paragraphNormal;
 }
 
+.form-error{
+    color: $semDanger;
+}
 
 label.form-label, input.form-control, textarea.form-control{
     font-family: $font-base;
