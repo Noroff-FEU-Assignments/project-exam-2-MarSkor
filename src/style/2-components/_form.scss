@@ -40,7 +40,7 @@ label.form-label, input.form-control, textarea.form-control{
 .errormsg{
     color: $redAccent;
     font-weight: 400;
-    background-color: rgb(255, 218, 218);
+    background-color: $errorMsgBg;
     border-radius: 2px;
     padding: 4px;
 }

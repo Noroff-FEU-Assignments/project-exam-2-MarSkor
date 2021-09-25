@@ -50,8 +50,8 @@ function MessageBox({id, first_name, last_name, message, email_address, createdA
             <Collapse in={open} >
             <div id="message-details">
                 <p><strong>Full Name:</strong> {first_name} {last_name}</p>
-                <p><strong>Comment:</strong> {message}</p>
                 <p><strong>Email: </strong> {email_address}</p> 
+                <p><strong>Comment:</strong> {message}</p>
             </div>
             </Collapse>
           </div>

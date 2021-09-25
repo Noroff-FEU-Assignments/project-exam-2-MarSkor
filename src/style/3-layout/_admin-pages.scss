@@ -59,15 +59,15 @@ div.admin__container.container-fluid{
 }
 .admin-section{
     padding: 30px 0 10px 0;
-}
-
-.admin-list{
-    font-family: $font-base;
-    font-weight: $base-font-weight;
-    &__ol{
-        list-style-type: circle;
+    text-align: center;
+    &__mainpage{
+        text-align: center;
+        position: relative;
+        top: 100px;
     }
 }
+
+
 
 
 /*

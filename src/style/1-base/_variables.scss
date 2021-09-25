@@ -7,7 +7,7 @@ $screen-full: 1400px;
 
 //SEMANTIC COLOR
 $semWarning: rgb(245, 154, 25);
-$semInfo:#3655cc;
+$semInfo:rgb(54, 85, 204);
 $semSuccess:rgb(63, 190, 101);
 $semSuccessIcon: rgb(61, 150, 49);
 $semDanger: rgb(255, 73, 83);
@@ -15,7 +15,7 @@ $semDanger: rgb(255, 73, 83);
 
 //MAIN COLORS
 $color-primary: rgb(242, 170, 76) ;
-$color-primary-dark: #1f1c1f;
+$color-primary-dark: rgb(31, 28, 31);
 $color-primary-light: rgb(228, 228, 228);
 $color-secondary-light: rgb(249, 213, 166);
 $color-secondary-dark: rgb(64, 59, 64);
@@ -32,6 +32,7 @@ $background-body: rgba(245, 245, 245, 0.886);
 $background-dropwdown-menu: rgb(245, 245, 245);
 $pageAccent: $color-secondary-light;
 $redAccent: rgb(255, 1, 34);
+$errorMsgBg: rgb(255, 218, 218);
 
 $white: rgb(255, 255, 255);
 $black: rgb(0, 0, 0);
@@ -40,6 +41,7 @@ $DarkBlueShade: rgba(28, 66, 89, 0.398);
 $DarkGreyShade:rgb(232, 232, 232);
 $DarkGreyShade2: rgb(38, 35, 38);
 $LightGreyShade: rgb(119, 110, 119);
+
 
 $fontColorDark: $DarkGreyShade2;
 $fontColorLight: rgb(245, 245, 245);
