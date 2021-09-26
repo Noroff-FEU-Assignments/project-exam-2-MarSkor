@@ -26,6 +26,12 @@ label.form-label, input.form-control, textarea.form-control{
     margin: 0 auto;
 }
 
+.form-width{
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 10px 0 10px 0;
+}
+
 /*
 * CONTACT US FORM
 ---------------------------------
@@ -178,17 +184,10 @@ option{
 * SEARCH FORM - ESTABLISHMENTS
 ---------------------------------
 */
-@media screen and(min-width: $screen-xl){
-    .estaTopPage{
-        &__searchbar{
-            max-width: 250px;
-            width: 100%;  
-        }
-    }
-}
+
 .estaTopPage{
     &__searchbar{
-        max-width: 370px;
+        max-width: 470px;
         margin: 0 auto;
         transition: .3s ease;
         z-index: 999;
@@ -211,3 +210,13 @@ option{
         }
     }
 }
+
+@media screen and(min-width: $screen-xl){
+    .estaTopPage{
+        &__searchbar{
+            max-width: 350px;
+            width: 100%;  
+        }
+    }
+}
+

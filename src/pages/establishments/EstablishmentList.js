@@ -84,7 +84,10 @@ function EstablishmentList(){
                     <Col className="estaTopPage__col">
                         <section className="estaTopPage__searchbar">
                             <Form.Group className="estaTopPage__form-group">
-                                <Form.Control className="estaTopPage__searchInput" type="text" placeholder="Search establishments..." onChange={e => onChangeSearchHandler(e.target.value)} value={searchInput} 
+                                <Form.Control className="estaTopPage__searchInput" 
+                                type="text" placeholder="Search establishments..." 
+                                onChange={e => onChangeSearchHandler(e.target.value)} 
+                                value={searchInput} 
                                 onBlur={() =>{
                                     setTimeout(()=> {
                                         setSuggestions([])

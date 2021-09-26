@@ -8,7 +8,7 @@ import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
 import Heading from "../../components/layout/Heading";
 import {ImLocation} from "react-icons/im";
-import {FaArrowLeft, FaInfo} from "react-icons/fa";
+import {FaArrowLeft, FaInfo, FaPen} from "react-icons/fa";
 import Loading from "../../components/common/Loading";
 import ErrorMessage from "../../components/common/Error";
 import ImageNotFound from "../../assets/image-not-found.jpg"
@@ -107,9 +107,10 @@ function EstablishmentDetails(){
                     </Col>
                     
                     {auth && <div className="delete-btn__container">
-                                    <DeleteEstablishment id={id}/>
+                                    <DeleteEstablishment id={id}/> 
                             </div>
                     }
+                    
                     
                 </Row> 
             

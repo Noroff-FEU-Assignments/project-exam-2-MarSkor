@@ -19,17 +19,29 @@ import Loading from "../../components/common/Loading";
 const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
 
 const schemaValidation = yup.object().shape({
-    name_of_establishment:yup.string().required("Please select an accommodation"),
-    first_name: yup.string().required("Please enter a name").min(1, "Name must be at least 3 characters"),
-    last_name: yup.string().required("Please enter a name").min(1, "Name must be at least 3 characters"),
-    phone_number: yup.string().required("Please enter your phone number").matches(phoneRegExp, "Invalid phone number").max(8, "Phone number can't be longer than 8 digit "),
-    email: yup.string().email("Please enter a valid email address").required("Need a valid email address. Example 'name@hotmail.com"),
+    name_of_establishment:yup.string()
+        .required("Please select an accommodation"),
+    first_name: yup.string()
+        .required("Please enter a name").min(1, "Name must be at least 3 characters"),
+    last_name: yup.string()
+        .required("Please enter a name").min(1, "Name must be at least 3 characters"),
+    phone_number: yup.string()
+        .required("Please enter your phone number")
+        .matches(phoneRegExp, "Invalid phone number")
+        .max(8, "Phone number can't be longer than 8 digit "),
+    email: yup.string().email("Please enter a valid email address")
+        .required("Need a valid email address. Example 'name@hotmail.com"),
     additional_comment: yup.string(),
-    number_of_guests: yup.number().typeError("Please select a number of guests").min(0, 'Min value 0.'),
-    arrival: yup.date().nullable().transform((curr, orig) => orig === '' ? null : curr)
-    .required('Please select the date of your arrival'),
-    departure: yup.date().nullable().transform((curr, orig) => orig === '' ? null : curr).required("Please select the date of your departure").min(
-        yup.ref('arrival'),
+    number_of_guests: yup.number()
+        .typeError("Please select a number of guests")
+        .min(0, 'Min value 0.'),
+    arrival: yup.date()
+        .nullable().transform((curr, orig) => orig === '' ? null : curr)
+        .required('Please select the date of your arrival'),
+    departure: yup.date()
+        .nullable().transform((curr, orig) => orig === '' ? null : curr)
+        .required("Please select the date of your departure")
+        .min(yup.ref('arrival'),
         "Departure can't be before arrival date"
     )
 });
@@ -51,7 +63,7 @@ function BookingForm(){
 
     //fetching accommodation list for the select options
     useEffect(()=>{
-        async function getAccommodation(){
+        async function getData(){
             try{
                 const response = await fetch(BASE_URL + "establishments");
                 if(response.ok){
@@ -66,8 +78,9 @@ function BookingForm(){
                 setLoading(false);
             }
         }
-        getAccommodation();
+        getData();
     }, []);
+
     if(loading){
         return <Loading/>
     }
@@ -83,7 +96,7 @@ function BookingForm(){
     async function onSubmit(data){
         setSubmitting(true);
         setError(null);
-        console.log(data)
+        // console.log(data)
 
         try{
             const response = await axios.post(enquiriesUrl, data)

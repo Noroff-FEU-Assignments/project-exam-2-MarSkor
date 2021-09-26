@@ -24,27 +24,27 @@ import CheckEnquiries from "./pages/admin/enquiries/EnquiriesPage";
 function App() {
   return (
       <div className="page-container">
-      <AuthProvider>
-        <Router>
-          <Navigationbar/>
-            <div className="app-content-container">
-              <Switch>
-                <Route exact path="/" component={HomePage} />
-                <Route path="/establishments" component={EstablishmentsPage}/>
-                <Route path="/details/:id" component={EstablishmentDetails}/>
-                <Route path="/login" component={LoginPage}/>
-                <Route path="/booking" component={EnquiryPage}/>
-                <Route path="/contact" component={ContactPage}/>
-                <Route path="/confirmation" component={Confirmation}/>
-                <ProtectedRoute path="/admin"  component={AdminPage} exact /> 
-                <ProtectedRoute path="/admin/createestablishment" component={Establishment} />
-                <ProtectedRoute path="/admin/contactmessages" component={ContactMessages} />
-                <ProtectedRoute path="/admin/checkenquiries" component={CheckEnquiries} />
-              </Switch>
-            </div>
-          <Footer/>
-        </Router>
-      </AuthProvider>
+        <AuthProvider>
+          <Router>
+            <Navigationbar/>
+              <div className="app-content-container">
+                <Switch>
+                  <Route exact path="/" component={HomePage} />
+                  <Route path="/establishments" component={EstablishmentsPage}/>
+                  <Route path="/details/:id" component={EstablishmentDetails}/>
+                  <Route path="/login" component={LoginPage}/>
+                  <Route path="/booking" component={EnquiryPage}/>
+                  <Route path="/contact" component={ContactPage}/>
+                  <Route path="/confirmation" component={Confirmation}/>
+                  <ProtectedRoute path="/admin"  component={AdminPage} exact /> 
+                  <ProtectedRoute path="/admin/createestablishment" component={Establishment} />
+                  <ProtectedRoute path="/admin/contactmessages" component={ContactMessages} />
+                  <ProtectedRoute path="/admin/checkenquiries" component={CheckEnquiries} />
+                </Switch>
+              </div>
+            <Footer/>
+          </Router>
+        </AuthProvider>
       </div>
   );
 }

@@ -41,9 +41,9 @@ function MessageBox({id, first_name, last_name, message, email_address, createdA
               <Button
               onClick={() => setOpen(!open)}
               aria-controls="message-details"
-              aria-expanded={open} className="message__button"
-              >
-              Show full message
+              aria-expanded={open} 
+              className="message__button">
+                Show full message
               </Button>
             </div>
          

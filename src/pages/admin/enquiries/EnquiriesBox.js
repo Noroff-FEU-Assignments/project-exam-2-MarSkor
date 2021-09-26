@@ -28,13 +28,17 @@ function EnquiriesBox({id, arrival, departure, email, first_name, last_name, nam
                     </div>
                 </section>
                 
-                <Button
-                onClick={() => setOpen(!open)}
-                aria-controls="enquiry-details"
-                aria-expanded={open} className="enquiry__button"
-                >
-                Show All Details
-                </Button>
+                <div className="alignRight">
+                    <Button
+                    onClick={() => setOpen(!open)}
+                    aria-controls="enquiry-details"
+                    aria-expanded={open} className="enquiry__button"
+                    >
+                    Show All Details
+                    </Button>
+                </div>
+                
+
                 <Collapse in={open} >
                 <div id="enquiry-details">
                     <Heading size="5" content="Accommodation details" />

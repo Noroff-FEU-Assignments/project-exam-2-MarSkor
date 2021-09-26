@@ -14,12 +14,21 @@ import Col from "react-bootstrap/Col";
 import {FaExclamationTriangle, FaCheck} from "react-icons/fa";
 import FormError from "../../../components/common/FormError";
 
-// const FILE_SIZE = 200000;
-// const SUPPORTED_FORMATS = ["image/jpg", "image/jpeg", "image/png"];
+const FILE_SIZE = 200000;
+// const SUPPORTED_FORMATS = ['image/jpg', 'image/jpeg', 'image/png'];
 const schemaValidation = yup.object().shape({
     description: yup.string()
         .required("Description is required"),
-    image: yup.mixed().required("A file is required"),
+    image: yup.mixed()
+    .test('name', 'Image is required', value => {
+        return value[0] && value[0].name !== '';
+    })
+    .test('fileSize', 'The image is too large', value => {
+        return value[0] && value[0].size <= FILE_SIZE;
+    }),
+    // .test('type', 'We only support image', value => {
+    //     return value[0] && value[0].type.includes("image/jpg", "image/jpeg", "image/png");
+    // }),
     name:yup.string()
         .required("Establishment name is required"),
     price_per_night: yup.number()
@@ -62,7 +71,7 @@ export default function AddEstablishment(){
 
         http.post(BASE_URL + "establishments", formDataToSend)
         .then(res =>{
-            console.log(res.data)
+            // console.log(res.data)
             return res.data.id
         })
         .then(refId =>{
@@ -74,7 +83,7 @@ export default function AddEstablishment(){
             return http.post(BASE_URL + "upload", formData)
         })
         .then(res =>{
-            console.log("success", res.data);
+            // console.log("success", res.data);
             setSuccess(true)
         })
         .catch(error =>{
@@ -132,7 +141,7 @@ export default function AddEstablishment(){
                     </Form.Group>
 
                     <Form.Group>
-                    <Form.Label className="createestablishment__label">Description</Form.Label>
+                        <Form.Label className="createestablishment__label">Description</Form.Label>
                         <div label="message">
                             <Form.Control  {...register("description")}
                             name="description"
